@@ -237,8 +237,7 @@ class TkinterGUI:
       return
 
     # DB information text
-    link = "https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=samples&t=gsod&page=table&_ga=2" \
-           ".126965706.635408540.1684247329-620543960.1665516938"
+    link = "https://cloud.google.com/bigquery/public-data#sample_tables"
     self.dbInfo = tk.Text(root, height=8, font=('Lato', 12), wrap=tk.WORD)
     self.dbInfo.pack(padx=10, pady=15, fill=tk.BOTH)
     self.dbInfo.tag_configure("dbInfo", justify='center', spacing1=5, spacing2=1.5, spacing3=5)
@@ -251,7 +250,7 @@ class TkinterGUI:
                        "specify the start and end year of the data you would like to download. The default limit of "
                        "downloaded results is 100, for not overloading the query the maximum limit is set to 1000.\n"
                        "The entries below are validated and accept numbers only. \n In order to create chart from a "
-                       "generated table select rows/columns you'd like to plot and click on the the 'Plot selected' "
+                       "generated table select rows/columns you'd like to plot and click on the 'Plot selected' "
                        "button in the toolbar on the table's right. The plot viewer will open in a new window.")
     self.dbInfo.tag_add("dbInfo", "1.0", "end")
     self.dbInfo.config(
